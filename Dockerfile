@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
-RUN apt-get install openssh-server
 RUN apt-get update
+RUN apt-get install openssh-server
 RUN systemctl enable ssh
 RUN systemctl start ssh
 RUN echo "GatewayPorts yes" >> /etc/ssh/sshd_config
