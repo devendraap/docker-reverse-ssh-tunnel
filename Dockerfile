@@ -2,8 +2,7 @@ FROM ubuntu:latest
 
 RUN apt-get update
 RUN apt-get install -y openssh-server systemd
-RUN systemctl enable ssh
-RUN systemctl start ssh
+RUN service ssh start
 RUN echo "GatewayPorts yes" >> /etc/ssh/sshd_config
 RUN service ssh start
 
